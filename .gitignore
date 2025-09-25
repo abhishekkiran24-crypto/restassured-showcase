@@ -1,0 +1,8 @@
+target/
+bin/
+allure-results/
+test-output/
+*.iml
+.vscode/
+src/test/resources/config.properties
+src/test/resources/schemas/config.properties
