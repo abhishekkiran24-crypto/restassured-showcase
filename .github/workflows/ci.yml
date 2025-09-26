@@ -30,7 +30,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-      - name: Run tests with Maven
+      - name: Run Maven tests
+        env:
+          # map repo secret GH_PAT to the environment the code expects:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         run: mvn clean test -DsuiteXmlFile=testng.xml
 
       - name: Upload Allure results
