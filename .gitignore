@@ -6,3 +6,38 @@ test-output/
 .vscode/
 src/test/resources/config.properties
 src/test/resources/schemas/config.properties
+
+# build & local stuff
+target/
+bin/
+allure-results/
+test-output/
+mvn-debug.log
+
+# local secret configs
+src/test/resources/schemas/config.properties
+src/test/resources/config.properties
+*.bak
+*~ 
+
+target/
+bin/
+allure-results/
+test-output/
+mvn-debug.log
+# local secret configs (do not commit real tokens)
+src/test/resources/schemas/config.properties
+src/test/resources/config.properties
+*.bak
+*~
+target/
+bin/
+allure-results/
+test-output/
+mvn-debug.log
+
+# local secret configs (do not commit real tokens)
+src/test/resources/schemas/config.properties
+src/test/resources/config.properties
+*.bak
+*~
