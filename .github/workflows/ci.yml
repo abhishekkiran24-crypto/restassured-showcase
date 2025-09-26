@@ -29,11 +29,17 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-
+      - name: Create config.properties from secret
+        run: |
+          mkdir -p src/test/resources/schemas
+          cat > src/test/resources/schemas/config.properties <<EOF
+          # generated in workflow - do not commit
+          base.url.github=https://api.github.com
+          github.token=${{ secrets.MY_GH_PAT }}
+          github.token.ttlSeconds=3
+          EOF
 
       - name: Run Maven tests
-        env:
-          # map repo secret GH_PAT to the environment the code expects:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         run: mvn clean test -DsuiteXmlFile=testng.xml
 
       - name: Upload Allure results
