@@ -9,6 +9,8 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN_SECRET: ${{ secrets.MY_GH_PAT }}
 
     steps:
       - name: Checkout repo
