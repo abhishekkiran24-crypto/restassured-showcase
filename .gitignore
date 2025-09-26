@@ -1,12 +1,3 @@
-target/
-bin/
-allure-results/
-test-output/
-*.iml
-.vscode/
-src/test/resources/config.properties
-src/test/resources/schemas/config.properties
-
 # build & local stuff
 target/
 bin/
@@ -20,24 +11,3 @@ src/test/resources/config.properties
 *.bak
 *~ 
 
-target/
-bin/
-allure-results/
-test-output/
-mvn-debug.log
-# local secret configs (do not commit real tokens)
-src/test/resources/schemas/config.properties
-src/test/resources/config.properties
-*.bak
-*~
-target/
-bin/
-allure-results/
-test-output/
-mvn-debug.log
-
-# local secret configs (do not commit real tokens)
-src/test/resources/schemas/config.properties
-src/test/resources/config.properties
-*.bak
-*~
