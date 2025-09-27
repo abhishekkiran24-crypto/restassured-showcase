@@ -44,7 +44,20 @@ jobs:
 
       - name: Upload Allure results
         uses: actions/upload-artifact@v4
+        
         with:
           name: allure-results
           path: target/allure-results/**
+
+      - name: Generate Allure report
+        run: |
+         npm install -g allure-commandline@2.13.9 || true
+         allure generate target/allure-results -o target/allure-report --clean
+
+      - name: Deploy Allure to Github Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./target/allure-report
+
 
