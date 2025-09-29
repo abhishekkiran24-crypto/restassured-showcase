@@ -104,9 +104,12 @@ jobs:
          ls -la target/allure-results || true
          allure generate target/allure-results -o target/allure-report --clean
 
-      - name: Sanitize Allure results
+      - name: Sanitize Allure output
         run: |
-         find target/allure-results -type f -exec sed -i 's/ghp_[A-Za-z0-9]*/***REDACTED***/g' {} +
+          # scrub tokens from allure-results and allure-report
+          find target/allure-results -type f -exec sed -i -E 's/ghp_[A-Za-z0-9_]+/***REDACTED***/g' {} \; || true
+          find target/allure-report -type f -exec sed -i -E 's/ghp_[A-Za-z0-9_]+/***REDACTED***/g' {} \; || true
+
 
 
       # optionally publish to gh-pages
