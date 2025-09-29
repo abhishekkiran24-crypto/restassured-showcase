@@ -1,0 +1,84 @@
+{
+  "uid" : "3639d3ff40e7ed09",
+  "name" : "getAuthenticatedUser_shouldReturn200",
+  "fullName" : "com.example.tests.github.GitHubAuthTest.getAuthenticatedUser_shouldReturn200",
+  "historyId" : "6110f48c6cb338447c6f349627bdd4a0",
+  "time" : {
+    "start" : 1759140887842,
+    "stop" : 1759140889568,
+    "duration" : 1726
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "35412c00bade9533",
+      "name" : "Request",
+      "source" : "35412c00bade9533.html",
+      "type" : "text/html",
+      "size" : 416
+    }, {
+      "uid" : "c27fcd97d5674101",
+      "name" : "HTTP/1.1 200 OK",
+      "source" : "c27fcd97d5674101.html",
+      "type" : "text/html",
+      "size" : 4764
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.example.tests.github.GitHubAuthTest"
+  }, {
+    "name" : "testClass",
+    "value" : "com.example.tests.github.GitHubAuthTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "getAuthenticatedUser_shouldReturn200"
+  }, {
+    "name" : "parentSuite",
+    "value" : "API Test Suite"
+  }, {
+    "name" : "suite",
+    "value" : "GitHubSuite"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.example.tests.github.GitHubAuthTest"
+  }, {
+    "name" : "host",
+    "value" : "runnervm3ublj"
+  }, {
+    "name" : "thread",
+    "value" : "2171@runnervm3ublj.TestNG-tests-2(19)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "3639d3ff40e7ed09.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,43 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "API Test Suite",
+    "children" : [ {
+      "name" : "GitHubSuite",
+      "children" : [ {
+        "name" : "com.example.tests.github.GitHubAuthTest",
+        "children" : [ {
+          "name" : "getAuthenticatedUser_shouldReturn200",
+          "uid" : "3639d3ff40e7ed09",
+          "parentUid" : "f747ac867b3fa61375623d61553f04de",
+          "status" : "passed",
+          "time" : {
+            "start" : 1759140887842,
+            "stop" : 1759140889568,
+            "duration" : 1726
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "listRepos_shouldReturn200",
+          "uid" : "9403cd52585e8418",
+          "parentUid" : "f747ac867b3fa61375623d61553f04de",
+          "status" : "passed",
+          "time" : {
+            "start" : 1759140889581,
+            "stop" : 1759140889825,
+            "duration" : 244
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "f747ac867b3fa61375623d61553f04de"
+      } ],
+      "uid" : "19b7c4bf312f731b714e13d194113b56"
+    } ],
+    "uid" : "d71b2bcdc75023cfe61e78332035056e"
+  } ]
+}

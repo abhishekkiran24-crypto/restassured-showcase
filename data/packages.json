@@ -1,0 +1,35 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "com.example.tests.github.GitHubAuthTest",
+    "children" : [ {
+      "name" : "getAuthenticatedUser_shouldReturn200",
+      "uid" : "3639d3ff40e7ed09",
+      "parentUid" : "ee30cfad0e47f6d16906a2bd53a78e3b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1759140887842,
+        "stop" : 1759140889568,
+        "duration" : 1726
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "listRepos_shouldReturn200",
+      "uid" : "9403cd52585e8418",
+      "parentUid" : "ee30cfad0e47f6d16906a2bd53a78e3b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1759140889581,
+        "stop" : 1759140889825,
+        "duration" : 244
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "com.example.tests.github.GitHubAuthTest"
+  } ]
+}

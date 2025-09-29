@@ -1,0 +1,21 @@
+[ {
+  "uid" : "9403cd52585e8418",
+  "name" : "listRepos_shouldReturn200",
+  "time" : {
+    "start" : 1759140889581,
+    "stop" : 1759140889825,
+    "duration" : 244
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3639d3ff40e7ed09",
+  "name" : "getAuthenticatedUser_shouldReturn200",
+  "time" : {
+    "start" : 1759140887842,
+    "stop" : 1759140889568,
+    "duration" : 1726
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
