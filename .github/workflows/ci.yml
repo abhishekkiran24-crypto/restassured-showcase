@@ -49,12 +49,55 @@ jobs:
           name: allure-results
           path: target/allure-results/**
 
-      - name: Download Allure CLI
+      - name: Download and install Allure CLI (robust)
         run: |
-         mkdir -p $HOME/.allure
-         curl -sL https://repo.maven.org/maven2/io/qameta/allure/allure-commandline/2.13.9/allure-commandline-2.13.9.tgz -o /tmp/allure.tgz
-         tar -xzf /tmp/allure.tgz -C $HOME/.allure --strip-components=1
-         echo "$HOME/.allure/bin" >> $GITHUB_PATH
+         set -euo pipefail
+         mkdir -p "$HOME/.allure"
+         OUT=/tmp/allure.tgz
+
+         # try Maven Central first, then GitHub releases as fallback
+          URLS=(
+            "https://repo.maven.org/maven2/io/qameta/allure/allure-commandline/2.13.9/allure-commandline-2.13.9.tgz"
+             "https://github.com/allure-framework/allure2/releases/download/2.13.9/allure-2.13.9.tgz"
+          )
+
+         success=0
+         for url in "${URLS[@]}"; do
+         echo "Trying $url"
+         # fetch with curl and fail on HTTP >=400
+         if curl -fSL "$url" -o "$OUT"; then
+         echo "Downloaded $url -> $OUT"
+         success=1
+         break
+         else
+         echo "Download failed for $url"
+         fi
+         done
+
+         if [ "$success" -ne 1 ]; then
+         echo "ERROR: Could not download Allure CLI from known locations."
+         ls -la /tmp || true
+         exit 2
+         fi
+
+         # sanity: check file is non-empty and valid tar
+         if [ ! -s "$OUT" ]; then
+         echo "ERROR: downloaded file is empty"
+         ls -la "$OUT" || true
+         exit 3
+         fi
+
+         # try listing contents first (for better error message if tar fails)
+         echo "Archive contents preview:"
+         tar -tzf "$OUT" | head -n 20 || true
+
+         # extract
+         tar -xzf "$OUT" -C "$HOME/.allure" --strip-components=1
+         echo "$HOME/.allure/bin" >> "$GITHUB_PATH"
+
+         echo "Allure installed to $HOME/.allure/bin"
+         ls -la "$HOME/.allure/bin" || true
+
 
       - name: Generate Allure report
         run: |
