@@ -49,15 +49,24 @@ jobs:
           name: allure-results
           path: target/allure-results/**
 
+      - name: Download Allure CLI
+        run: |
+         mkdir -p $HOME/.allure
+         curl -sL https://repo.maven.org/maven2/io/qameta/allure/allure-commandline/2.13.9/allure-commandline-2.13.9.tgz -o /tmp/allure.tgz
+         tar -xzf /tmp/allure.tgz -C $HOME/.allure --strip-components=1
+         echo "$HOME/.allure/bin" >> $GITHUB_PATH
+
       - name: Generate Allure report
         run: |
-         npm install -g allure-commandline@2.13.9 || true
+         ls -la target/allure-results || true
          allure generate target/allure-results -o target/allure-report --clean
 
-      - name: Deploy Allure to Github Pages
+      # optionally publish to gh-pages
+      - name: Deploy Allure to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./target/allure-report
+
 
 
