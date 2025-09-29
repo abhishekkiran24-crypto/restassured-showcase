@@ -104,6 +104,11 @@ jobs:
          ls -la target/allure-results || true
          allure generate target/allure-results -o target/allure-report --clean
 
+      - name: Sanitize Allure results
+        run: |
+         find target/allure-results -type f -exec sed -i 's/ghp_[A-Za-z0-9]*/***REDACTED***/g' {} +
+
+
       # optionally publish to gh-pages
       - name: Deploy Allure to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
