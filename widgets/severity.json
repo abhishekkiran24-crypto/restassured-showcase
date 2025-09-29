@@ -1,20 +1,20 @@
 [ {
-  "uid" : "de78fce3c75fdab6",
-  "name" : "getAuthenticatedUser_shouldReturn200",
+  "uid" : "800cfd3d282e919a",
+  "name" : "listRepos_shouldReturn200",
   "time" : {
-    "start" : 1759155023086,
-    "stop" : 1759155026208,
-    "duration" : 3122
+    "start" : 1759165234544,
+    "stop" : 1759165234838,
+    "duration" : 294
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "f995b49309d0830d",
-  "name" : "listRepos_shouldReturn200",
+  "uid" : "bb0f87fab7199daa",
+  "name" : "getAuthenticatedUser_shouldReturn200",
   "time" : {
-    "start" : 1759155026222,
-    "stop" : 1759155026615,
-    "duration" : 393
+    "start" : 1759165232282,
+    "stop" : 1759165234529,
+    "duration" : 2247
   },
   "status" : "passed",
   "severity" : "normal"
