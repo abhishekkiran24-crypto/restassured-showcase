@@ -1,12 +1,12 @@
 {
-  "uid" : "bb0f87fab7199daa",
+  "uid" : "851fde7899af6085",
   "name" : "getAuthenticatedUser_shouldReturn200",
   "fullName" : "com.example.tests.github.GitHubAuthTest.getAuthenticatedUser_shouldReturn200",
   "historyId" : "6110f48c6cb338447c6f349627bdd4a0",
   "time" : {
-    "start" : 1759165232282,
-    "stop" : 1759165234529,
-    "duration" : 2247
+    "start" : 1759382223412,
+    "stop" : 1759382227427,
+    "duration" : 4015
   },
   "status" : "passed",
   "flaky" : false,
@@ -16,15 +16,15 @@
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ {
-      "uid" : "cb4e108cc44bfa64",
+      "uid" : "8e1da4980793978f",
       "name" : "Request",
-      "source" : "cb4e108cc44bfa64.html",
+      "source" : "8e1da4980793978f.html",
       "type" : "text/html",
       "size" : 416
     }, {
-      "uid" : "4d609d46c4256a8c",
+      "uid" : "93b1a833204ff8f7",
       "name" : "HTTP/1.1 200 OK",
-      "source" : "4d609d46c4256a8c.html",
+      "source" : "93b1a833204ff8f7.html",
       "type" : "text/html",
       "size" : 4783
     } ],
@@ -58,7 +58,7 @@
     "value" : "runnervm3ublj"
   }, {
     "name" : "thread",
-    "value" : "2199@runnervm3ublj.TestNG-tests-2(19)"
+    "value" : "2194@runnervm3ublj.TestNG-tests-2(19)"
   }, {
     "name" : "framework",
     "value" : "testng"
@@ -79,6 +79,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "bb0f87fab7199daa.json",
+  "source" : "851fde7899af6085.json",
   "parameterValues" : [ ]
 }
