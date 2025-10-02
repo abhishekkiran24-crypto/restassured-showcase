@@ -9,26 +9,26 @@
         "name" : "com.example.tests.github.GitHubAuthTest",
         "children" : [ {
           "name" : "getAuthenticatedUser_shouldReturn200",
-          "uid" : "851fde7899af6085",
+          "uid" : "b9aec1c512c9fd8d",
           "parentUid" : "f747ac867b3fa61375623d61553f04de",
           "status" : "passed",
           "time" : {
-            "start" : 1759382223412,
-            "stop" : 1759382227427,
-            "duration" : 4015
+            "start" : 1759422731142,
+            "stop" : 1759422734698,
+            "duration" : 3556
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "listRepos_shouldReturn200",
-          "uid" : "c2577333bf4ff8b6",
+          "uid" : "47378778a66704da",
           "parentUid" : "f747ac867b3fa61375623d61553f04de",
           "status" : "passed",
           "time" : {
-            "start" : 1759382227442,
-            "stop" : 1759382227834,
-            "duration" : 392
+            "start" : 1759422734711,
+            "stop" : 1759422735102,
+            "duration" : 391
           },
           "flaky" : false,
           "newFailed" : false,

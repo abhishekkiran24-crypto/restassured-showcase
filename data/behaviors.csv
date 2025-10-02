@@ -1,2 +1,3 @@
 "Epic","Feature","Story","FAILED","BROKEN","PASSED","SKIPPED","UNKNOWN"
-"","","","0","0","2","0","0"
+"Github API","Authentication","List repositories of authenticated user","0","0","1","0","0"
+"Github API","Authentication","Get authenticated user details","0","0","1","0","0"
