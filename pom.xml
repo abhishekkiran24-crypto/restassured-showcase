@@ -1,4 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>restassured-framework</groupId>
   <artifactId>restarrued-framework</artifactId>
@@ -84,6 +84,15 @@
   </dependencies>
 
   <build>
+      <!--<resources>
+        <resource>
+            <directory>src/test/resources</directory>
+            <includes>
+                <include>environment.properties</include>
+            </includes>
+            <targetPath>${project.build.directory}/allure-results</targetPath>
+        </resource>
+    </resources>-->
     <plugins>
       <!-- Allure maven plugin (optional, used to generate HTML if you call it) -->
       <plugin>
@@ -109,8 +118,8 @@
           </systemPropertyVariables>
         </configuration>
       </plugin>
-
-    </plugins>
+      
+      </plugins>
   </build>
 
   

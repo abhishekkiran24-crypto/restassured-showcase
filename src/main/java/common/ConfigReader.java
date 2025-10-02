@@ -13,27 +13,34 @@ public class ConfigReader {
             }
             p.load(is);
         } catch (Exception e) {
-            throw new RuntimeException("Failed to schemas/load config.properties", e);
+            throw new RuntimeException("Failed to load schemas/config.properties", e);
         }
     }
 
-    //returns a non-null value. Checks OS env var overide first
+    // Returns a non-null value. Allows env var override for github.token
     public static String get(String key) {
-    	if(key==null) return "";
-    	
-        String value= p.getProperty(key);
-        return value==null ? "" : value;
+        if (key == null) return "";
+
+        // Special case: github.token -> check MY_GH_PAT environment variable
+        if ("github.token".equals(key)) {
+            String envVal = System.getenv("MY_GH_PAT");
+            if (envVal != null && !envVal.isEmpty()) {
+                return envVal;
+            }
+        }
+
+        // fallback to properties file
+        String value = p.getProperty(key);
+        return value == null ? "" : value;
     }
-    public static int getInt(String key, int defaultValue)
-    {
-    	String v=get(key);
-    	if(v.isEmpty()) return defaultValue;
-    	try
-    	{
-    		return Integer.parseInt(v);
-    	}
-    	catch (NumberFormatException e) {
-    		return defaultValue;
-    	}
+
+    public static int getInt(String key, int defaultValue) {
+        String v = get(key);
+        if (v.isEmpty()) return defaultValue;
+        try {
+            return Integer.parseInt(v);
+        } catch (NumberFormatException e) {
+            return defaultValue;
+        }
     }
 }

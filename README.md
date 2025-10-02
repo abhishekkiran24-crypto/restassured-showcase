@@ -39,13 +39,6 @@ mvn -Denv=prod test
 - View Allure report after run:
 allure serve target/allure-results
 
-## Phase 4
-- CI + Allure report published to GitHub Pages
-## Run tests locally
-- Add your PAT to env (do NOT store in repo):
-```bash
-export RESTASSURED_GH_PAT=ghp_XXXXXXXXXXXXXXXXXXXX
-
 ## Tech Stack
 
 - Java 11

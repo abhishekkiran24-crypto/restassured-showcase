@@ -15,11 +15,15 @@ public class ReqResRequestSpecFactory {
 
     private static RequestSpecification requestSpec;
     private static ResponseSpecification responseSpec;
+    
+   
 
     public static RequestSpecification getRequestSpec() {
         if (requestSpec == null) {////lazy initialization pattern. It behaves like a singleton. Ensures it's created only once ( the first time)
-            RequestSpecBuilder builder = new RequestSpecBuilder()
-                    .setBaseUri(ConfigReader.get("base.url"))
+        	 // read api key if present
+            String apiKey = ConfigReader.get("reqres.api.key");
+        	RequestSpecBuilder builder = new RequestSpecBuilder()
+                    .setBaseUri(ConfigReader.get("base.url.reqres"))
                     .addHeader("Accept", "application/json")
                     .addFilter(new RequestLoggingFilter())
                     .addFilter(new ResponseLoggingFilter())
@@ -27,9 +31,11 @@ public class ReqResRequestSpecFactory {
                     .setContentType(ContentType.JSON)
                     .log(LogDetail.ALL);
 
-            // ✅ Always use TokenManager for Bearer token
-            String token = TokenManager.getToken();
-            builder.addHeader("Authorization", "Bearer " + token);
+
+       // only add x-api-key if config contains it
+            if (apiKey != null && !apiKey.isEmpty()) {
+                builder.addHeader("x-api-key", apiKey);
+            }
 
             requestSpec = builder.build();
         }

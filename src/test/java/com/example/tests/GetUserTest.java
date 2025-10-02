@@ -21,6 +21,7 @@ import reqres.TokenManager;
 
 import static org.hamcrest.Matchers.*;
 import static io.restassured.RestAssured.given;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
 @Epic("Create User")
 @Feature("Get User")
@@ -41,6 +42,7 @@ public class GetUserTest extends ReqresBaseTest {
 		          .spec(ReqResRequestSpecFactory.getResponseSpec())
 		         
 		          .statusCode(200)
+		          .body(matchesJsonSchemaInClasspath("schemas/getUserSchema.json"))
 		          .body("data.id",equalTo(2));
 	}
 	//@Test
