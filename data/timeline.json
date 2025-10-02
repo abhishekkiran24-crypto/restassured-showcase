@@ -4,35 +4,35 @@
   "children" : [ {
     "name" : "runnervm3ublj",
     "children" : [ {
-      "name" : "2180@runnervm3ublj.TestNG-tests-2(19)",
+      "name" : "2293@runnervm3ublj.TestNG-tests-2(19)",
       "children" : [ {
         "name" : "listRepos_shouldReturn200",
-        "uid" : "47378778a66704da",
-        "parentUid" : "3f7be02d53efe928be021f5a1c6fa22f",
+        "uid" : "280e4f4ef8de979e",
+        "parentUid" : "2aa98da122323a0e1811d1d08db16b64",
         "status" : "passed",
         "time" : {
-          "start" : 1759422734711,
-          "stop" : 1759422735102,
-          "duration" : 391
+          "start" : 1759423217596,
+          "stop" : 1759423217875,
+          "duration" : 279
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "getAuthenticatedUser_shouldReturn200",
-        "uid" : "b9aec1c512c9fd8d",
-        "parentUid" : "3f7be02d53efe928be021f5a1c6fa22f",
+        "uid" : "d8298fabcef983c3",
+        "parentUid" : "2aa98da122323a0e1811d1d08db16b64",
         "status" : "passed",
         "time" : {
-          "start" : 1759422731142,
-          "stop" : 1759422734698,
-          "duration" : 3556
+          "start" : 1759423212641,
+          "stop" : 1759423217580,
+          "duration" : 4939
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "3f7be02d53efe928be021f5a1c6fa22f"
+      "uid" : "2aa98da122323a0e1811d1d08db16b64"
     } ],
     "uid" : "270f121a01a91a44e18988e72306d8ff"
   } ]

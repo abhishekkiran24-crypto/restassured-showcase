@@ -1,47 +1,47 @@
 {
-  "uid" : "b9aec1c512c9fd8d",
-  "name" : "getAuthenticatedUser_shouldReturn200",
-  "fullName" : "com.example.tests.github.GitHubAuthTest.getAuthenticatedUser_shouldReturn200",
-  "historyId" : "6110f48c6cb338447c6f349627bdd4a0",
+  "uid" : "280e4f4ef8de979e",
+  "name" : "listRepos_shouldReturn200",
+  "fullName" : "com.example.tests.github.GitHubAuthTest.listRepos_shouldReturn200",
+  "historyId" : "c6c554798b3cfde3d74678606c5616f9",
   "time" : {
-    "start" : 1759422731142,
-    "stop" : 1759422734698,
-    "duration" : 3556
+    "start" : 1759423217596,
+    "stop" : 1759423217875,
+    "duration" : 279
   },
-  "description" : "Verify that an authenticated user can retrieve their profile information",
-  "descriptionHtml" : "<p>Verify that an authenticated user can retrieve their profile information</p>\n",
+  "description" : "Verify that an authenticated user can list their repositories",
+  "descriptionHtml" : "<p>Verify that an authenticated user can list their repositories</p>\n",
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ ],
   "testStage" : {
-    "description" : "Verify that an authenticated user can retrieve their profile information",
+    "description" : "Verify that an authenticated user can list their repositories",
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ {
-      "uid" : "791b522033028ffd",
+      "uid" : "8d02e1a522870033",
       "name" : "Request",
-      "source" : "791b522033028ffd.html",
+      "source" : "8d02e1a522870033.html",
       "type" : "text/html",
-      "size" : 352
+      "size" : 364
     }, {
-      "uid" : "5a60fc6b1c32b5d7",
+      "uid" : "8e1afd5b8f0b712a",
       "name" : "Request",
-      "source" : "5a60fc6b1c32b5d7.html",
+      "source" : "8e1afd5b8f0b712a.html",
       "type" : "text/html",
-      "size" : 352
+      "size" : 364
     }, {
-      "uid" : "d657862e5259ee11",
+      "uid" : "4252dafd81be3e4",
       "name" : "HTTP/1.1 200 OK",
-      "source" : "d657862e5259ee11.html",
+      "source" : "4252dafd81be3e4.html",
       "type" : "text/html",
-      "size" : 4781
+      "size" : 47378
     }, {
-      "uid" : "24ff7e6c16226988",
+      "uid" : "daf6d1c85058475b",
       "name" : "HTTP/1.1 200 OK",
-      "source" : "24ff7e6c16226988.html",
+      "source" : "daf6d1c85058475b.html",
       "type" : "text/html",
-      "size" : 4781
+      "size" : 47378
     } ],
     "parameters" : [ ],
     "stepsCount" : 0,
@@ -58,7 +58,7 @@
     "value" : "com.example.tests.github.GitHubAuthTest"
   }, {
     "name" : "testMethod",
-    "value" : "getAuthenticatedUser_shouldReturn200"
+    "value" : "listRepos_shouldReturn200"
   }, {
     "name" : "parentSuite",
     "value" : "API Test Suite"
@@ -73,7 +73,7 @@
     "value" : "runnervm3ublj"
   }, {
     "name" : "thread",
-    "value" : "2180@runnervm3ublj.TestNG-tests-2(19)"
+    "value" : "2293@runnervm3ublj.TestNG-tests-2(19)"
   }, {
     "name" : "framework",
     "value" : "testng"
@@ -82,7 +82,7 @@
     "value" : "java"
   }, {
     "name" : "story",
-    "value" : "Get authenticated user details"
+    "value" : "List repositories of authenticated user"
   }, {
     "name" : "epic",
     "value" : "Github API"
@@ -91,7 +91,7 @@
     "value" : "Authentication"
   }, {
     "name" : "severity",
-    "value" : "critical"
+    "value" : "normal"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -101,11 +101,11 @@
   "hidden" : false,
   "retry" : false,
   "extra" : {
-    "severity" : "critical",
+    "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "b9aec1c512c9fd8d.json",
+  "source" : "280e4f4ef8de979e.json",
   "parameterValues" : [ ]
 }
