@@ -110,9 +110,13 @@ jobs:
           find target/allure-results -type f -exec sed -i -E 's/ghp_[A-Za-z0-9_]+/***REDACTED***/g' {} \; || true
           find target/allure-report -type f -exec sed -i -E 's/ghp_[A-Za-z0-9_]+/***REDACTED***/g' {} \; || true
 
+      - name: Add Allure environment info
+        run: |
+         echo "Java Version=$JAVA_HOME" >> target/allure-results/environment.properties
+         echo "OS=$(uname -s)" >> target/allure-results/environment.properties
+         echo "Git Commit=${GITHUB_SHA}" >> target/allure-results/environment.properties
 
-
-      # optionally publish to gh-pages
+# optionally publish to gh-pages
       - name: Deploy Allure to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
