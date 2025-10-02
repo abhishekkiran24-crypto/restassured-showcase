@@ -6,13 +6,24 @@ import java.util.Properties;
 public class ConfigReader {
     private static Properties p = new Properties();
 
-    static {  // static block executes once when the class is loaded
-        try (InputStream is = ConfigReader.class.getClassLoader().getResourceAsStream("schemas/config.properties")) {
-            if (is == null) {
+    static { 
+    	// static block executes once when the class is loaded
+    	InputStream is = null;
+        try
+        {
+        ClassLoader loader=ConfigReader.class.getClassLoader();
+        is = loader.getResourceAsStream("schemas/config.properties"); 
+        if (is == null) {
+            	is=loader.getResourceAsStream("schemas/config.properties.template");
+            }
+            if(is==null) {
                 throw new RuntimeException("schemas/config.properties not found in classpath");
             }
             p.load(is);
-        } catch (Exception e) {
+        }
+        
+        catch (Exception e) 
+        {
             throw new RuntimeException("Failed to load schemas/config.properties", e);
         }
     }
